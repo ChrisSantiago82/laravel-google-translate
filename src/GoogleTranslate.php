@@ -83,19 +83,17 @@ class GoogleTranslate
         ];
     }
 
-    public function justTranslate(string $input, $from = null, $to = null): string
+    public function justTranslate(string $input, $to = null): string
     {
         $this->validateInput($input);
 
-        $translateFrom = $from ?? config('googletranslate.default_source_translation');
         $translateTo = $to ?? config('googletranslate.default_target_translation');
 
-        $translateFrom = $this->sanitizeLanguageCode($translateFrom);
         $translateTo = $this->sanitizeLanguageCode($translateTo);
 
         $response = $this
             ->translateClient
-            ->translate($input, $translateFrom, $translateTo);
+            ->translate($input, null, $translateTo);
 
         return $response['text'];
     }

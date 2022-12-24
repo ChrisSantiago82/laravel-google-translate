@@ -32,8 +32,12 @@ class GoogleTranslateClient
             ->detectLanguageBatch($input);
     }
 
-    public function translate(string $text, string $translateFrom, string $translateTo, string $format = 'text')
+    public function translate(string $text, $translateFrom, string $translateTo, string $format = 'text')
     {
+        if ($translateFrom === null) {
+            return $this->translate
+                ->translate($text, ['target' => $translateTo, 'format' => $format]);
+        }
         return $this->translate
             ->translate($text, ['source' => $translateFrom, 'target' => $translateTo, 'format' => $format]);
     }
