@@ -1,5 +1,5 @@
 {
-    "name": "joggapp/laravel-google-translate",
+    "name": "chrissantiago82/laravel-google-translate",
     "description": "Laravel package for the Google Translate API",
     "keywords": [
         "laravel",
@@ -12,8 +12,8 @@
     "license": "MIT",
     "authors": [
         {
-            "name": "Harish Toshniwal",
-            "email": "harish@jogg.co"
+            "name": "Christoph Krebs",
+            "email": "christoph@krebs-programming.com"
         }
     ],
     "autoload": {
