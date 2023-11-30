@@ -13,7 +13,7 @@ This package makes using the Google Translate API in your laravel app a breeze w
 - You can install this package via composer using this command:
 
 ```bash
-composer require joggapp/laravel-google-translate
+composer require ChrisSantiago82/laravel-google-translate
 ```
 
 - The package will automatically register itself.

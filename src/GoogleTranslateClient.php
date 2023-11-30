@@ -1,10 +1,10 @@
 <?php
 
-namespace JoggApp\GoogleTranslate;
+namespace ChrisSantiago82\GoogleTranslate;
 
 use Exception;
 use Google\Cloud\Translate\V2\TranslateClient;
-use JoggApp\GoogleTranslate\Traits\SupportedLanguages;
+use ChrisSantiago82\GoogleTranslate\Traits\SupportedLanguages;
 
 class GoogleTranslateClient
 {
@@ -32,14 +32,16 @@ class GoogleTranslateClient
             ->detectLanguageBatch($input);
     }
 
-    public function translate(string $text, $translateFrom, string $translateTo, string $format = 'text')
+    public function translate(string $text, string $translateFrom, string $translateTo, string $format = 'text')
     {
-        if ($translateFrom === null) {
-            return $this->translate
-                ->translate($text, ['target' => $translateTo, 'format' => $format]);
-        }
         return $this->translate
             ->translate($text, ['source' => $translateFrom, 'target' => $translateTo, 'format' => $format]);
+    }
+
+    public function translatejust(string $text, string $translateTo, string $format = 'text')
+    {
+        return $this->translate
+            ->translate($text, ['target' => $translateTo, 'format' => $format]);
     }
 
     public function translateBatch(array $input, string $translateFrom, string $translateTo, string $format = 'text')

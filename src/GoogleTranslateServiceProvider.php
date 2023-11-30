@@ -1,6 +1,6 @@
 <?php
 
-namespace JoggApp\GoogleTranslate;
+namespace ChrisSantiago82\GoogleTranslate;
 
 use Illuminate\Support\Facades\Blade;
 use Illuminate\Support\ServiceProvider;

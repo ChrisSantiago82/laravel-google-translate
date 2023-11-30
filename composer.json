@@ -18,12 +18,12 @@
     ],
     "autoload": {
         "psr-4": {
-            "JoggApp\\GoogleTranslate\\": "src"
+            "ChrisSantiago82\\GoogleTranslate\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "JoggApp\\GoogleTranslate\\Tests\\": "tests"
+            "ChrisSantiago82\\GoogleTranslate\\Tests\\": "tests"
         }
     },
     "require": {
@@ -39,10 +39,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "JoggApp\\GoogleTranslate\\GoogleTranslateServiceProvider"
+                "ChrisSantiago82\\GoogleTranslate\\GoogleTranslateServiceProvider"
             ],
             "aliases":{
-                "GoogleTranslate": "JoggApp\\GoogleTranslate\\GoogleTranslateFacade"
+                "GoogleTranslate": "ChrisSantiago82\\GoogleTranslate\\GoogleTranslateFacade"
             }
         }
     },
