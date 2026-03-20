@@ -83,14 +83,16 @@ class GoogleTranslate
         ];
     }
 
-    public function justTranslate(string $input, $to = null): string
+    public function justTranslate($input, $to = null): string
     {
+        if ($input == '') {
+            return '';
+        }
+
         $this->validateInput($input);
 
-        $translateFrom = $from ?? config('googletranslate.default_source_translation');
         $translateTo = $to ?? config('googletranslate.default_target_translation');
 
-        $translateFrom = $this->sanitizeLanguageCode($translateFrom);
         $translateTo = $this->sanitizeLanguageCode($translateTo);
 
         $response = $this
